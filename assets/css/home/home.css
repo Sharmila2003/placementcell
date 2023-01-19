@@ -1,0 +1,47 @@
+/* navbar */
+.navbar-nav{
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+width: 100%;
+}
+.navbar{
+background-color: #3A8891;
+height:70px;
+}
+/* Title */
+h1{
+   font-family: 'Montserrat', sans-serif;
+   color:aqua;
+    text-align: center;
+    padding-top:65px;
+}
+.heading{
+    color:#4C0027;
+    padding:5% 10%;
+    text-align:center;
+    font-family: 'Ubuntu', sans-serif;
+}
+/* Header  */
+.container #header-img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ .header-text{
+    position:absolute;
+    text-align: center;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -95%);
+    
+ }
+ .container{
+    position: relative;
+ }
+ #title,#footer{
+   background-color:#D6E4E5;
+ }
