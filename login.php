@@ -22,8 +22,8 @@
       </div>
       <?php }?> 
             <div class="mb-3">
-              <label>Username</label>
-              <input type="text" name="uname" class="form-control my-2" placeholder="Enter Username" autocomplete="off">
+              <label>EmailId</label>
+              <input type="email" name="email" class="form-control my-2" placeholder="Enter Emailid" autocomplete="off">
             </div>
             <div class="mb-3">
               <label>Password</label>

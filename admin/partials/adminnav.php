@@ -1,7 +1,7 @@
 <?php
     include('../includes/db_connect.php');
     session_start();
-    if(!isset($_SESSION['username']))
+    if(!isset($_SESSION['emailid']))
     {
         header('location:../../login.php');
     }
@@ -13,17 +13,17 @@
 
         <!--Css Styslesheets-->
         <link rel="stylesheet" href="../assets/css/nav.css">
-        <link rel="stylesheet" href="../assets/css/admin.css">
 
       
         <!-- =====GOOGLE FONT===== -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Roboto&family=Rubik:ital,wght@1,900&family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
         <!-- bootstrap -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   
-
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/c91aa22992.js" crossorigin="anonymous"></script>
        
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -71,19 +71,10 @@
                             <span class="nav__name">Placement Officer</span>
                         </a>
 
-                        <a href="../admin/staff.php" class="nav__link admin_nav_link">
-                        <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__name">Staff</span>
-                        </a>
-                        <a href="../admin/student.php" class="nav__link admin_nav_link">
-                        <i class="fa-sharp fa-solid fa-graduation-cap"></i>
-
-                        <span class="nav__name">Students</span>
-                        </a>
-               
-                        <a href="../admin/company.php" class="nav__link admin_nav_link">
-                        <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__name">Company Details</span>
+                       
+                        <a href="../admin/passwordlink.php" class="nav__link admin_nav_link">
+                        <i class="fa-solid fa-lock"></i>
+                            <span class="nav__name">Setting Password</span>
                         </a>
                     </div>
                 </div>

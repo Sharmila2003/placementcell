@@ -84,9 +84,4 @@
 </section>
 </div>  
 <?php include('partials/footer.php');?>
-    <!-- <div class="row">
-      <div class="col-12 mt-3 mb-1">
-        <h4 class="text-uppercase">Minimal Statistics Cards</h4>
-        <p>Statistics on minimal cards.</p>
-      </div>
-    </div> -->
+   

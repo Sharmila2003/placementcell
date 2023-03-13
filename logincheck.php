@@ -1,7 +1,7 @@
 <?php
 
 include('./includes/db_connect.php');
-if(isset($_POST['uname']) && isset($_POST['pass']) && isset($_POST['role'])){
+if(isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['role'])){
 
     function test_input($data) {
         $data = trim($data);
@@ -10,21 +10,21 @@ if(isset($_POST['uname']) && isset($_POST['pass']) && isset($_POST['role'])){
         return $data;
       }
 
-      $username=test_input($_POST['uname']);
+      $emailid=test_input($_POST['email']);
       $password=test_input($_POST['pass']);
       $role=test_input($_POST['role']);
 
-      if(empty($username)){
-        header("location:./login.php?error=UserName is Required");
+      if(empty($emailid)){
+        header("location:./login.php?error=Emailid is Required");
       }else if(empty($password)){
         header("location:./login.php?error=password is Required");
       }else if($role==='Select Role') 
       {
         header("location:./login.php?error=Role is Required");
       }
-      else if(!empty($username) && !empty($password) && $role!=='Select Role'){
+      else if(!empty($emailid) && !empty($password) && $role!=='Select Role'){
         session_start(); 
-        $s = "select * from users where username='$username' && password='$password' &&  role='$role'";
+        $s = "select * from users where emailid='$emailid' && password='$password' &&  roles='$role'";
             
         $result = mysqli_query($connect, $s);
     
@@ -33,20 +33,20 @@ if(isset($_POST['uname']) && isset($_POST['pass']) && isset($_POST['role'])){
         if($num==1)
         {
             
-            $_SESSION['username']=$username;
+            $_SESSION['emailid']=$emailid;
             if($role=='admin'){
-              header('location:./admin/dashboard.php');
+              header('location:./admin/welcomeadmin.php');
             }else if($role==='student'){
-              header('location:./student/student.php');
+              header('location:./student/welcomestudent.php');
             }else if($role==='staff'){
-            header('location:./staff/staff.php');
+            header('location:./staff/welcomestaff.php');
             }else if($role==='placementofficer'){
-            header('location:./placementofficer/placementofficer.php');
+            header('location:./placementofficer/welcomeplacementofficer.php');
             }
         }
         else
         {
-            header("location:./login.php?error=Entered Username or Password or role is  Wrong");
+            header("location:./login.php?error=Emailid or Password or role is  Wrong");
         }
       }
     }
